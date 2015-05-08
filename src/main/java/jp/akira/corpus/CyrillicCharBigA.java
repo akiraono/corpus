@@ -3,6 +3,6 @@ public class CyrillicCharBigA {
     private static Character sjis_char = 0x8440;
     
     public String toString(){
-	return unicode_char.toString();
+    	return unicode_char.toString();
     }
 }
