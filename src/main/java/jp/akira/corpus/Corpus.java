@@ -1,5 +1,8 @@
 public class Corpus {
     public static void main(String[] args){
-	System.out.println("corpus");
+	CyrillicCharBigA A = new CyrillicCharBigA();
+	System.out.println(A);
+	CyrillicCharSmallA a = new CyrillicCharSmallA();
+	System.out.println(a);
     }
 }

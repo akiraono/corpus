@@ -25,6 +25,5 @@ public class CyrillicChar {
 	}
 	System.out.print("\n");
     }
-    public int unicode2sjis(){}
-    public 
+    public int unicode2sjis(){return 0;}
 }
