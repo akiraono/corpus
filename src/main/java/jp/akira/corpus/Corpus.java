@@ -1,12 +1,12 @@
 public class Corpus {
     public static void main(String[] args){
-	CyrillicCharBigA A = new CyrillicCharBigA();
+	CyrillicBigA A = new CyrillicBigA();
 	System.out.println(A);
-	CyrillicCharSmallA a = new CyrillicCharSmallA();
+	CyrillicSmallA a = new CyrillicSmallA();
 	System.out.println(a);
-		CyrillicCharBigB B = new CyrillicCharBigB();
+	CyrillicBigB B = new CyrillicBigB();
 	System.out.println(B);
-	CyrillicCharSmallB b = new CyrillicCharSmallB();
+	CyrillicSmallB b = new CyrillicSmallB();
 	System.out.println(b);
     }
 }

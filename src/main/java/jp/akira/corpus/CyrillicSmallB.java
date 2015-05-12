@@ -1,4 +1,4 @@
-public class CyrillicCharSmallB {
+public class CyrillicSmallB {
     private static Character unicode_char = '\u0431';
     private static Character sjis_char = 0x8471;
     
