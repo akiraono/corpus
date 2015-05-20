@@ -1,4 +1,6 @@
-public class CyrillicChar {
+package jp.akira.corpus;
+
+public class CyrillicCharFirst {
     
     private static Character g = '\u0413';
     
@@ -11,7 +13,7 @@ public class CyrillicChar {
     private static Character[] sjis_capsoff = {0x8470,0x8471,0x8472,0x8473,0x8474,0x8475,0x8476,0x8477,0x8478,0x8479,0x847a,0x847b,0x847c,0x847d,0x847e,0x8480,0x8481,0x8482,0x8483,0x8484,0x8485,0x8486,0x8487,0x8488,0x8489,0x848a,0x848b,0x848c,0x848d,0x848e,0x848f,0x8490,0x8491};
     
     public static void main(String[] args){
-	CyrillicChar cyrillic = new CyrillicChar();
+	CyrillicCharFirst cyrillic = new CyrillicCharFirst();
 	cyrillic.print_list();
     }
 
