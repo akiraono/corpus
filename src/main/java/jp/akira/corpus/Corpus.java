@@ -42,11 +42,20 @@ public class Corpus {
     }
 
     private void readChars(String s){
+	CyrillicChars cyrillic = new CyrillicChars();
 	int length = s.length();
 	char[] chars = new char[length];
 	for(int i=0;i<length;i++){
 	    chars[i] = s.charAt(i);
 	}
-	System.out.println(Character.codePointAt(chars,0,length));
+	for(int i=0;i<length;i++){
+	    //System.out.println(Character.codePointAt(chars,i,length));
+	    if(cyrillic.isAcceptable(chars[i])){
+		System.out.print("\033[0m" + chars[i]);
+	    }else{
+		System.err.print("\033[31m" + chars[i]);
+	    }
+	}
+	System.out.print("\033[0m\n");
     }
 }

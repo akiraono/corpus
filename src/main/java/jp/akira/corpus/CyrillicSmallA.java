@@ -7,4 +7,11 @@ public class CyrillicSmallA {
     public String toString(){
 	return unicode_char.toString();
     }
+    public static boolean isValid(char c){
+    	Character another = new Character(c);
+    	if(another.equals(unicode_char)){
+    	    return true;
+    	}
+    	return false;
+    }
 }
