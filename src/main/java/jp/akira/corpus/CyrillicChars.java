@@ -42,7 +42,10 @@ public class CyrillicChars {
     // ANOTHER chars
     private static Character[] acceptables = {'\u0020', // space
 					      '\u0021', // exclamation
+					      '\u0028', // left parenthesis
+					      '\u0029', // right parenthesis
 					      '\u002c', // comma
+					      '\u002d', // hyphen-minus
 					      '\u002e', // period
 					      '\u0030', // 0
 					      '\u0031', // 1
