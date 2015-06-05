@@ -66,11 +66,28 @@ public class Corpus {
 
     private void validate(ArrayList<String> data){
 	for(int i=0;i<data.size();i++){
-	    readChars(data.get(i));
+	    String s = data.get(i);
+	    if(display_invalid_only){
+		if(isIncludeInvalidChar(s)){
+		    printChars(data.get(i));
+		}
+	    }else{
+		printChars(data.get(i));
+	    }
 	}
     }
 
-    private void readChars(String s){
+    private boolean isIncludeInvalidChar(String s){
+	CyrillicChars cyrillic = new CyrillicChars();
+	for(int i=0;i<s.length();i++){
+	    if(!cyrillic.isAcceptable(s.charAt(i))){
+		return true;
+	    }
+	}
+	return false;
+    }
+
+    private void printChars(String s){
 	CyrillicChars cyrillic = new CyrillicChars();
 	int length = s.length();
 	char[] chars = new char[length];
@@ -78,17 +95,17 @@ public class Corpus {
 	    chars[i] = s.charAt(i);
 	}
 	for(int i=0;i<length;i++){
-	    if(display_invalid_only){
-		if(!cyrillic.isAcceptable(chars[i])){
-		    System.out.print("\033[0m" + chars[i]);
-		}
-	    }else{
+	    // if(display_invalid_only){
+	    // 	if(!cyrillic.isAcceptable(chars[i])){
+	    // 	    System.out.print("\033[0m" + chars[i]);
+	    // 	}
+	    // }else{
 		if(cyrillic.isAcceptable(chars[i])){
 		    System.out.print("\033[0m" + chars[i]);
 		}else{
 		    System.err.print("\033[31m" + chars[i]);
 		}
-	    }
+	    // }
 	}
 	System.out.print("\033[0m\n");
     }

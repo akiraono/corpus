@@ -42,6 +42,7 @@ public class CyrillicChars {
     // ANOTHER chars
     private static Character[] acceptables = {'\u0020', // space
 					      '\u0021', // exclamation
+					      '\u0025', // percent
 					      '\u0028', // left parenthesis
 					      '\u0029', // right parenthesis
 					      '\u002c', // comma
@@ -57,8 +58,11 @@ public class CyrillicChars {
 					      '\u0037', // 7
 					      '\u0038', // 8
 					      '\u0039', // 9
+					      '\u003a', // colon
+					      '\u003b', // semi colon
 					      '\u003f', // question
-					      
+					      '\u00ab', // <<
+					      '\u00bb', // >>
     };
     
     public static void main(String[] args){
