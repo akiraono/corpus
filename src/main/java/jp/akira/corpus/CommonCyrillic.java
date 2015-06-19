@@ -1,9 +1,11 @@
 package jp.akira.corpus;
 
-abstract class AbstractCyrillic {
-    static Character unicode_char = '\u0000';
+public class CommonCyrillic {
+    Character unicode_char = '\u0040'; //'@'
     
-    static boolean isValid(char c){
+    boolean isValid(char c){
+
+	System.out.println(this.unicode_char);
 	Character another = new Character(c);
 	if(another.equals(unicode_char)){
 	    return true;

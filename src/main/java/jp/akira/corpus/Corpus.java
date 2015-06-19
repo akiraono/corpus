@@ -26,6 +26,8 @@ public class Corpus {
 	
     }
     private void processMain(){
+	CyrillicBigA biga = new CyrillicBigA();
+	System.out.println(biga.isValid('c'));
 	data = readFromFile(input_file_name);
 	if(validate){
 	    validate(data);
