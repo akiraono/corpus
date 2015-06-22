@@ -1,0 +1,4 @@
+drop table Nominative;
+create table Nominative(nominative text, genitive text, dative text, accusative text, instrumental text, locative text);
+insert into Nominative values("book", "book", "book", "book", "book", "book");
+
