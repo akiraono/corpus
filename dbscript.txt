@@ -1,4 +1,5 @@
-drop table Nominative;
-create table Nominative(nominative text, genitive text, dative text, accusative text, instrumental text, locative text);
-insert into Nominative values("book", "book", "book", "book", "book", "book");
+drop table Noun;
+create table Noun (SingularNominative text, SingularGenitive text, SingularDative text, SingularAccusative text, SingularInstrumental text, SingularLocative text, PluralNominative text, PluralGenitive text, PluralDative text, PluralAccusative text, PluralInstrumental text, PluralLocative text);
+insert into Noun values("стакан","стакана","стакану","стакан","стаканом","стакане","стаканы","стаканов","стаканам","стаканы","стаканами","стаканах");
+
 
